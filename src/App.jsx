@@ -156,7 +156,8 @@ export default function App() {
       <main className="container">
         {/* PROFILE CARD */}
         <section className="profile-card">
-          <div className="profile-title">Hostel Leave Request [Night out]</div>
+          {/* <div className="profile-title">Hostel Leave Request [Night out]</div> */}
+          <div className="fancy-title">Hostel Leave Request [Night out]</div>
 
           <div className="profile-main">
             <div className="profile-photo">

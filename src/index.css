@@ -1,4 +1,14 @@
 /* Next Code 2 CSS */
+.fancy-title {
+ font-family:'Dancing Script', cursive;
+  font-style: italic;
+    font-size: 22px;
+  font-weight: 600;
+  color: #333;             /* softer black like the screenshot */
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;   /* slight spacing for elegance */
+}
 
 
 /* src/styles.css */
