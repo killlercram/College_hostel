@@ -1,0 +1,455 @@
+/* Next Code 2 CSS */
+
+
+/* src/styles.css */
+:root {
+  /* --header-blue: #004a64; */
+  --header-blue: #00263d; 
+  --light-blue: #e2edf7;
+  --card-border: #d6d6d6;
+  --text-main: #222;
+  --text-muted: #555;
+  --logout-pink: #f72771;
+  /* --table-header: #0070bd; */
+  --table-header: #004b87;   /* darker and richer */
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f3f3;
+  color: var(--text-main);
+}
+
+/* ========= TOP BAR ========= */
+
+.topbar {
+  background: var(--header-blue);
+  color: #fff;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.top-left {
+  flex: 0 0 auto;
+}
+
+.hamburger {
+  width: 32px;
+  height: 32px;
+  background: #033342;
+  border-radius: 4px;
+  border: 1px solid #022633;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 7px;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 2px;
+  background: #ffffff;
+  border-radius: 1px;
+}
+
+.top-center {
+  flex: 1;
+  text-align: center;
+}
+
+.top-right {
+  flex: 0 0 auto;
+}
+.logout {
+  font-size: 12px;
+  padding: 9px 14px;
+  border-radius: 4px;
+  border: 1px solid #cc0033;     
+  color: #cc0033;               
+  font-weight: bold;            
+  background: rgba(255, 0, 0, 0.08); 
+  cursor: pointer;
+}
+
+.welcome {
+  font-size:15px;
+  
+}
+
+
+/* ========= TABS BAR ========= */
+
+.tab-bar {
+  background: var(--light-blue);
+  border-bottom: 1px solid #c9d4e0;
+  padding:px  14px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 12px;
+}
+
+.tab {
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-active {
+  font-weight: bold;
+    color: #003399;
+}
+
+.tab-close {
+  font-weight: bold;
+  color: #ff0000;
+  margin-left: 6px;
+}
+
+/* ========= MAIN CONTAINER ========= */
+
+.container {
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 0 16px 40px;
+}
+
+/* ========= PROFILE CARD ========= */
+
+/* .profile-card {
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+  padding: 12px 28px 14px;
+  font-size: 13px;
+} */
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #e2e2e2;
+
+  box-shadow:
+      0px 4px 8px rgba(0, 0, 0, 0.18),
+      0px 8px 20px rgba(0, 0, 0, 0.15);
+
+  transform: translateZ(10px);   
+  position: relative;
+  z-index: 5;
+
+  padding: 14px 28px 16px;
+}
+
+
+.profile-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profile-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.profile-photo {
+  flex: 0 0 auto;
+}
+
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* border: 1px solid #cccccc; */
+  object-fit: cover;      
+}
+
+
+.profile-col {
+  flex: 1;
+}
+
+.profile-col-right {
+  text-align: left;
+}
+.name-line {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #003399;  
+  font-size: 16px; 
+}
+
+
+.line {
+  margin-bottom: 2px;
+  color: var(--text-muted);
+}
+
+.label {
+  font-weight: bold;
+  color: #003399;  
+  font-size: 12px;
+}
+.profile-value {
+  font-size: 12px;
+  font-weight: 400;     
+  color: black;       
+}
+
+
+.card-divider {
+  border: none;
+  border-top: 1px solid black;
+  margin: 10px 0 8px;
+}
+
+.profile-footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  font-size: 13px;
+}
+
+.footer-label {
+  text-transform: uppercase;
+}
+
+/* ========= LEAVE FORM CARD ========= */
+
+.leave-card {
+  margin-top: 18px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid var(--card-border);
+  /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.18); */
+  padding: 14px 28px 16px;
+  font-size: 13px;
+}
+
+.leave-grid {
+  display: grid;
+  grid-template-columns: 140px 410px 1fr;
+  column-gap: 16px;
+}
+
+.leave-label-col {
+  padding-top: 20px;
+}
+
+.big-label {
+  font-weight: bold;
+   color: #003399;
+    font-size: 13px;
+
+  margin-bottom: 40px;
+}
+
+.leave-middle-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.small-row {
+  display: flex;
+  gap: 10px;
+}
+
+.small-field {
+  flex: 1;
+}
+
+.small-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.small-label-1 {
+  color: #003399;
+  font-weight: bold;
+  font-size: 14px;
+
+  margin-bottom: 4px;
+}
+
+.date-input {
+  width: 100%;
+  padding: 8px 6px;
+  border: 1px solid #b8b8b8;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.reason-row {
+  margin-top: 8px;
+}
+
+.reason-input {
+  width: 100%;
+  padding: 8px 6px;
+  border-radius: 12px;
+  border: 1px solid #b8b8b8;
+  font-size: 12px;
+}
+
+.leave-right-col {
+  padding-top: 4px;
+}
+
+.address-textarea {
+  margin-top: 4px;
+  width: 100%;
+  min-height: 90px;
+  border: 1px solid #b8b8b8;
+  border-radius: 12px;
+  resize: vertical;
+  padding: 5px 6px;
+  font-size: 12px;
+}
+
+.form-actions {
+  margin-top: 16px;
+}
+
+.center-actions {
+  text-align: center;
+}
+
+.apply-btn {
+  background: #0070bd;
+  color: #ffffff;
+  border: 1px solid #005d9d;
+  border-radius: 12px;
+  font-size: 13px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight:bold;
+}
+
+/* ========= HISTORY TABLE (unchanged for now, we’ll tune later) ========= */
+
+.history {
+  margin-top: 20px;
+}
+
+.history h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+
+.table-wrap {
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 0;    /* table touches box edges */
+  border: none;        /* border only on outer box + cells */
+  padding: 0;
+}
+
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  border-radius: 8px;   
+  overflow: hidden;     
+}
+
+
+/* common border for all cells */
+.history-table th,
+.history-table td {
+  border: 1px solid #d6d6d6;
+   padding: 12px 14px;     
+}
+
+.history-table td{
+  font-size: 13px;
+  font-weight: 500;         /* slightly bold */
+  letter-spacing: 0.3px;    /* little spacing between letters */
+  color: #222;              /* clean dark text */
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* header styling */
+.history-table thead th {
+  background: var(--table-header); /* dark blue */
+  color: #ffffff;
+  padding: 8px;
+  font-weight: bold;
+}
+
+/* Outer white box for heading + table */
+.history-box {
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 6px 10px 10px;
+}
+
+/* Heading inside box */
+.history-header {
+  font-weight: bold;
+  font-size: 15px;
+  color: #003399;
+  padding: 5px 0 10px 4px;
+}
+
+/* Line between heading and table */
+.history-divider {
+  border: none;
+  border-top: 1px solid black;
+  margin: 0 0 4px;
+}
+
+
+/* 
+.row-cancelled td {
+  color: #777777;
+} */
+
+.link-btn {
+  background: transparent;
+  border: none;
+  color: #0070bd;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link-btn.muted {
+  color: #999999;
+}
+
+.cancel-col {
+  white-space: nowrap;
+}
+
+/* basic responsiveness (not critical for your lab page, but just in case) */
+@media (max-width: 1024px) {
+  .leave-grid {
+    grid-template-columns: 130px 1fr;
+  }
+  .leave-right-col {
+    grid-column: 1 / 3;
+    margin-top: 10px;
+  }
+}
+
+.email-yellow {
+  color: #ffd700;     /* Pure golden yellow */
+  font-weight: bold;
+}
