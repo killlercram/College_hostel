@@ -1,7 +1,7 @@
 .fancy-title {
  font-family:'Dancing Script', cursive;
   font-style: italic;
-    font-size: 22px;
+    font-size: 16px;
   font-weight: 600;
   color: #333;            
   text-align: center;
@@ -28,11 +28,15 @@
   box-sizing: border-box;
 }
 
-body {
+html,body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #f3f3f3;
   color: var(--text-main);
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; 
+
 }
 
 /* ========= TOP BAR ========= */
@@ -44,6 +48,10 @@ body {
   display: flex;
   align-items: center;
   font-size: 13px;
+
+   justify-content: space-between;
+    width: 100vw;    
+    box-sizing: border-box  
 }
 
 .top-left {
@@ -166,6 +174,30 @@ body {
   gap: 20px;
 }
 
+/* Stack profile columns on small screens so text doesn't overflow */
+@media (max-width: 768px) {
+  .profile-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .profile-col,
+  .profile-col-right {
+    width: 100%;
+  }
+
+  .profile-card {
+    padding: 14px 16px;   /* a bit tighter on mobile */
+  }
+
+  .profile-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
 .profile-photo {
   flex: 0 0 auto;
 }
@@ -187,6 +219,12 @@ body {
 .profile-col-right {
   text-align: left;
 }
+
+.profile-col-right .line {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 .name-line {
   font-weight: bold;
   margin-bottom: 4px;
@@ -239,12 +277,42 @@ body {
   padding: 14px 28px 16px;
   font-size: 13px;
 }
+.leave-card * {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
 
 .leave-grid {
   display: grid;
   grid-template-columns: 140px 410px 1fr;
   column-gap: 16px;
 }
+/* Mobile fix: stack leave form fields */
+@media (max-width: 768px) {
+  .leave-grid {
+    grid-template-columns: 1fr;   /* one column layout */
+    row-gap: 16px;
+  }
+
+  .leave-label-col,
+  .leave-middle-col,
+  .leave-right-col {
+    width: 100%;
+  }
+
+  .small-row {
+    flex-direction: column;  /* date fields stack */
+    gap: 6px;
+  }
+
+  .date-input,
+  .reason-input,
+  .address-textarea {
+    width: 100%;
+  }
+}
+
+
 
 .leave-label-col {
   padding-top: 20px;
@@ -291,6 +359,7 @@ body {
   border: 1px solid #b8b8b8;
   border-radius: 12px;
   font-size: 12px;
+  background: #f0f0f0
 }
 
 .reason-row {
@@ -443,6 +512,58 @@ body {
 }
 
 .email-yellow {
-  color: #ffd700;     /* Pure golden yellow */
+  color: #ffd700;
   font-weight: bold;
+}
+
+/* ---- Mobile layout for Leave form ---- */
+@media (max-width: 600px) {
+  .leave-grid {
+    display: block;
+  }
+
+  .leave-label-col {
+    padding-top: 0;
+    margin-bottom: 6px;
+  }
+
+  .leave-label-col .big-label:first-child {
+    margin-bottom: 4px;
+  }
+
+  .leave-label-col .big-label:last-child {
+    display: none;
+  }
+
+  .small-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .small-field {
+    width: 100%;
+  }
+
+  .date-input,
+  .reason-input,
+  .address-textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .reason-row {
+    margin-top: 12px;
+  }
+
+  .reason-row::before {
+    content: "Reason:";
+    display: block;
+    font-weight: bold;
+    color: #003399;
+    margin-bottom: 4px;
+  }
+
+  .leave-right-col {
+    margin-top: 16px;
+  }
 }
