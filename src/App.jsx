@@ -1,4 +1,3 @@
-// Next Code Base CODE 2
 
 // src/App.jsx
 import React, { useState } from "react";
@@ -225,7 +224,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* LEAVE FORM CARD (TOP PART OF SECOND IMAGE) */}
+        {/* LEAVE FORM CARD  */}
         <section className="leave-card">
           <form onSubmit={applyLeave}>
             <div className="leave-grid">
@@ -288,8 +287,7 @@ export default function App() {
             </div>
           </form>
         </section>
-
-        {/* HISTORY TABLE – we’ll style this in the next screenshot step */}
+{/* History Part */}
       <section className="history">
   <div className="history-box">
     <div className="history-header">Applied Leave History</div>

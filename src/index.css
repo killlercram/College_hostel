@@ -1,13 +1,12 @@
-/* Next Code 2 CSS */
 .fancy-title {
  font-family:'Dancing Script', cursive;
   font-style: italic;
     font-size: 22px;
   font-weight: 600;
-  color: #333;             /* softer black like the screenshot */
+  color: #333;            
   text-align: center;
   margin-bottom: 10px;
-  letter-spacing: 0.5px;   /* slight spacing for elegance */
+  letter-spacing: 0.5px;  
 }
 
 
@@ -137,14 +136,6 @@ body {
 
 /* ========= PROFILE CARD ========= */
 
-/* .profile-card {
-  background: #ffffff;
-  border-radius: 4px;
-  border: 1px solid var(--card-border);
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
-  padding: 12px 28px 14px;
-  font-size: 13px;
-} */
 
 .profile-card {
   background: #ffffff;
@@ -245,7 +236,6 @@ body {
   background: #ffffff;
   border-radius: 4px;
   border: 1px solid var(--card-border);
-  /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.18); */
   padding: 14px 28px 16px;
   font-size: 13px;
 }
@@ -349,7 +339,7 @@ body {
   font-weight:bold;
 }
 
-/* ========= HISTORY TABLE (unchanged for now, we’ll tune later) ========= */
+/* ========= HISTORY TABLE  ========= */
 
 .history {
   margin-top: 20px;
@@ -364,8 +354,8 @@ body {
 .table-wrap {
   overflow: auto;
   background: #ffffff;
-  border-radius: 0;    /* table touches box edges */
-  border: none;        /* border only on outer box + cells */
+  border-radius: 0;    
+  border: none;       
   padding: 0;
 }
 
@@ -379,7 +369,6 @@ body {
 }
 
 
-/* common border for all cells */
 .history-table th,
 .history-table td {
   border: 1px solid #d6d6d6;
@@ -388,9 +377,9 @@ body {
 
 .history-table td{
   font-size: 13px;
-  font-weight: 500;         /* slightly bold */
-  letter-spacing: 0.3px;    /* little spacing between letters */
-  color: #222;              /* clean dark text */
+  font-weight: 500;         
+  letter-spacing: 0.3px;   
+  color: #222;              
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
@@ -427,11 +416,6 @@ body {
 }
 
 
-/* 
-.row-cancelled td {
-  color: #777777;
-} */
-
 .link-btn {
   background: transparent;
   border: none;
@@ -448,7 +432,6 @@ body {
   white-space: nowrap;
 }
 
-/* basic responsiveness (not critical for your lab page, but just in case) */
 @media (max-width: 1024px) {
   .leave-grid {
     grid-template-columns: 130px 1fr;
