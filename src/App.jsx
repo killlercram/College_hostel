@@ -11,6 +11,16 @@ export default function App() {
   const [history, setHistory] = useState([
     {
       id: 1,
+      from: "2025-12-09",
+      to: "2025-12-10",
+      reason: "Group Project and exam studies",
+      address: "Dehradun",
+      status: "Approved",
+      remarks: "leave approved.",
+      verifiedOn: "09/12/2025 10:52:35 AM",
+    },
+    {
+      id: 2,
       from: "2025-12-04",
       to: "2025-12-05",
       reason: "Birthday",
@@ -20,7 +30,7 @@ export default function App() {
       verifiedOn: "04/12/2025 11:35:25 AM",
     },
     {
-      id: 2,
+      id: 3,
       from: "2025-11-29",
       to: "2025-11-30",
       reason: "Exam",
@@ -30,7 +40,7 @@ export default function App() {
       verifiedOn: "11/29/2025 9:16:25 AM",
     },
     {
-      id: 3,
+      id: 4,
       from: "2025-11-17",
       to: "2025-11-23",
       reason: "weeding",
@@ -40,7 +50,7 @@ export default function App() {
       verifiedOn: "11/17/2025 12:21:48 PM",
     },
     {
-      id: 4,
+      id: 5,
       from: "2025-10-04",
       to: "2025-10-05",
       reason: "Interview",
@@ -50,7 +60,7 @@ export default function App() {
       verifiedOn: "10/3/2025 10:50:40 AM",
     },
     {
-      id: 5,
+      id: 6,
       from: "2025-10-02",
       to: "2025-10-03",
       reason: "Outside",
@@ -60,7 +70,7 @@ export default function App() {
       verifiedOn: "",
     },
     {
-      id: 6,
+      id: 7,
       from: "2025-09-18",
       to: "2025-09-21",
       reason: "Going to Noida for Interview",
@@ -70,7 +80,7 @@ export default function App() {
       verifiedOn: "9/18/2025 7:30:37 AM",
     },
     {
-      id: 7,
+      id: 8,
       from: "2025-09-12",
       to: "2025-09-13",
       reason: "Friend birthday",
@@ -80,7 +90,7 @@ export default function App() {
       verifiedOn: "",
     },
     {
-      id: 8,
+      id: 9,
       from: "2025-08-28",
       to: "2025-08-29",
       reason: "Doc appointment",
@@ -90,7 +100,7 @@ export default function App() {
       verifiedOn: "8/28/2025 1:14:19 PM",
     },
     {
-      id: 9,
+      id: 10,
       from: "2025-08-21",
       to: "2025-08-21",
       reason: "Doctor Visit",
